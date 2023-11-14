@@ -59,6 +59,14 @@
                   "with": "src/environments/environment.development.ts"
                 }
               ]
+            },
+            "test": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.test.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -71,6 +79,9 @@
             },
             "development": {
               "browserTarget": "deploy-demo:build:development"
+            },
+            "test": {
+              "browserTarget": "deploy-demo:build:test"
             }
           },
           "defaultConfiguration": "development"
@@ -96,13 +107,31 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "fileReplacements": [
+              {
+                "replace": "src/environments/environment.ts",
+                "with": "src/environments/environment.test.ts"
+              }
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": "47485116-4654-427d-be37-7827a651a72c"
+    "analytics": "47485116-4654-427d-be37-7827a651a72c",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
