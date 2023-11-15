@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubFollowersService } from '../services/github.followers.service';
 import { ActivatedRoute } from '@angular/router';
-import { combineLatest, map, switchMap } from 'rxjs';
 
 @Component({
   selector: 'github-followers',
@@ -22,6 +21,6 @@ export class GithubFollowersComponent implements OnInit {
           }
         });
   }
-};
+}
 
 
