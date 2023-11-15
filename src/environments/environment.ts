@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    color: 'yellow'
+    color: "red"
 };
